@@ -44,7 +44,7 @@ version = "1.0.0"
 
 jar {
     manifest {
-        attributes("Implementation-Title": "Adempiere Project Management",
+        attributes("Implementation-Title": "Adempiere Template Management",
                    "Implementation-Version": version, 
                    "EntityType": entityType)
     }
