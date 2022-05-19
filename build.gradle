@@ -19,7 +19,7 @@ if (JavaVersion.current().isJava8Compatible()) {
 }
 
 dependencies {
-    api 'io.github.adempiere:project:3.9.4-develop-1.0'
+    api 'io.github.adempiere:template:3.9.4-develop-1.0'
 }
 
 sourceSets {
