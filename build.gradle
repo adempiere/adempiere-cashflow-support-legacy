@@ -1,9 +1,9 @@
 apply plugin: 'java-library'
 apply plugin: 'maven-publish'
 apply plugin: 'signing'
-
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 1.11
+def baseVersion = '3.9.4'
+def baseGroupId = 'io.github.adempiere'
 
 repositories {
     mavenLocal()
@@ -19,7 +19,14 @@ if (JavaVersion.current().isJava8Compatible()) {
 }
 
 dependencies {
-    api 'io.github.adempiere:template:3.9.4-develop-1.0'
+   api fileTree(
+        dir: 'lib',
+        include: [
+            '*.jar'
+        ]
+    )
+    //	ADempiere Core
+    api "${baseGroupId}:base:${baseVersion}"
 }
 
 sourceSets {
